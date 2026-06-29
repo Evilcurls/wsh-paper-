@@ -1,0 +1,15 @@
+{
+  "name": "wsh-paper",
+  "version": "1.0.0",
+  "description": "飞书多维表格文献自动收割：读取PDF论文，按提示词自动填写文章标题、开源资源、一句话总结、模型结构、算力开销、关键指标、局限性、文献日期等字段。集成 MinerU PDF 解析 + lark-cli Base 操作。",
+  "author": {
+    "name": "WSH"
+  },
+  "repository": "https://github.com/<你的GitHub用户名>/wsh-paper-skill",
+  "license": "MIT",
+  "keywords": ["feishu", "lark", "base", "bitable", "paper", "literature", "pdf", "academic", "文献", "论文"],
+  "dependencies": {
+    "skills": ["mineru"],
+    "bins": ["lark-cli", "python3"]
+  }
+}

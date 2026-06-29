@@ -1,0 +1,5 @@
+# wsh-paper skill
+__pycache__/
+*.pyc
+.DS_Store
+paper_cache/

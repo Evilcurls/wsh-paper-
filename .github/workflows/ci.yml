@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate SKILL.md frontmatter
+        run: |
+          python3 -c "
+          import re, yaml
+          with open('SKILL.md', 'r') as f:
+              content = f.read()
+          match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+          fm = yaml.safe_load(match.group(1))
+          print(f'Skill: {fm[\"name\"]} v{fm[\"version\"]}')
+          assert fm['name'] == 'wsh-paper', f'Expected wsh-paper, got {fm[\"name\"]}'
+          print('✅ Valid')
+          "
+        shell: bash
+      - name: Validate plugin.json
+        run: |
+          python3 -c "
+          import json
+          with open('.claude-plugin/plugin.json', 'r') as f:
+              p = json.load(f)
+          print(f'Plugin: {p[\"name\"]} v{p[\"version\"]}')
+          print('✅ Valid')
+          "
+        shell: bash
