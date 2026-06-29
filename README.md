@@ -13,7 +13,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<你的GitHub用户名>/wsh-paper-skill.git ~/.claude/skills/wsh-paper/
+git clone https://github.com/Evilcurls/wsh-paper-.git ~/.claude/skills/wsh-paper/
 ```
 
 > **注意：** 需要同时安装 MinerU Skill 作为 PDF 解析后端。

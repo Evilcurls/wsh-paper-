@@ -5,7 +5,7 @@
   "author": {
     "name": "WSH"
   },
-  "repository": "https://github.com/<你的GitHub用户名>/wsh-paper-skill",
+  "repository": "https://github.com/Evilcurls/wsh-paper-",
   "license": "MIT",
   "keywords": ["feishu", "lark", "base", "bitable", "paper", "literature", "pdf", "academic", "文献", "论文"],
   "dependencies": {
